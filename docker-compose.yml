@@ -1,0 +1,56 @@
+services:
+  mysql:
+    image: mysql:9.6
+    container_name: demo_dongthoi_mysql
+    restart: unless-stopped
+    # Mặc định Docker chỉ chờ 10 giây rồi giết hẳn tiến trình (mã thoát 137).
+    # Cho MySQL đủ thời gian ghi hết trang dữ liệu xuống đĩa để tắt êm.
+    stop_grace_period: 60s
+    environment:
+      MYSQL_ROOT_PASSWORD: demo123
+      MYSQL_DATABASE: demo_dongthoi
+    # Cac tham so duoi day phuc vu truc tiep cho de tai:
+    #   innodb-lock-wait-timeout : rut ngan thoi gian cho khoa de demo khong phai doi lau
+    #   innodb-print-all-deadlocks: ghi moi deadlock ra log de doc lai lam bao cao
+    #   innodb-status-output-locks: hien chi tiet khoa trong SHOW ENGINE INNODB STATUS
+    command: >
+      --innodb-lock-wait-timeout=10
+      --innodb-print-all-deadlocks=ON
+      --innodb-status-output-locks=ON
+      --performance-schema=ON
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3310:3306"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-pdemo123"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  app:
+    build: .
+    container_name: demo_dongthoi_app
+    restart: unless-stopped
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: demo123
+      DB_NAME: demo_dongthoi
+    ports:
+      - "8010:8000"
+    volumes:
+      - ./app:/code/app
+      - ./tests:/code/tests
+      - ./schema.sql:/code/schema.sql:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql_data:

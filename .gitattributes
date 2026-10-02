@@ -1,0 +1,7 @@
+* text=auto
+# File .bat phải có xuống dòng kiểu Windows (CRLF), nếu không cmd có thể chạy sai lệnh goto
+*.bat text eol=crlf
+*.sh  text eol=lf
+*.docx binary
+*.jpg  binary
+*.png  binary

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Môi trường / IDE
+.env
+.idea/
+.vscode/
+*.log
+
+# Office: file tạm khi đang mở tài liệu
+~$*
