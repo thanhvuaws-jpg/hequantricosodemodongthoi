@@ -203,16 +203,16 @@ COMMIT;`,
 
     let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="font-family:inherit">`;
     danh_sach_luong.forEach((l, i) => {
-      if (i % 2) s += `<rect x="0" y="${dinh + i * cao}" width="${W}" height="${cao}" fill="#fafbfc"/>`;
+      if (i % 2) s += `<rect x="0" y="${dinh + i * cao}" width="${W}" height="${cao}" fill="rgba(148, 163, 184, 0.07)"/>`;
     });
     mocDep(tMax).forEach(t => {
-      s += `<line x1="${X(t)}" y1="${dinh - 6}" x2="${X(t)}" y2="${H - 8}" stroke="#eceef2"/>
-            <text x="${X(t)}" y="${dinh - 10}" font-size="10.5" fill="#98a2b3" text-anchor="middle">${so(t)} ms</text>`;
+      s += `<line x1="${X(t)}" y1="${dinh - 6}" x2="${X(t)}" y2="${H - 8}" stroke="rgba(148, 163, 184, 0.18)"/>
+            <text x="${X(t)}" y="${dinh - 10}" font-size="10.5" fill="#94a3b8" text-anchor="middle">${so(t)} ms</text>`;
     });
     danh_sach_luong.forEach((l, i) => {
       const y = dinh + i * cao;
       s += `<text class="nhan-luong" data-luong="${esc(l)}" x="${trai - 8}" y="${y + 16}" font-size="11.5"
-              fill="#1b1f24" text-anchor="end">${esc(l)}</text>`;
+              fill="#cbd5e1" text-anchor="end">${esc(l)}</text>`;
     });
     sk.forEach((e, idx) => {
       const i = danh_sach_luong.indexOf(e.luong);
@@ -222,7 +222,7 @@ COMMIT;`,
       s += `<rect class="thanh" data-i="${idx}" x="${x1}" y="${y + 5}" width="${w}" height="14" rx="3"
               fill="${mauLoai(e.loai)}" opacity="${e.loai === "cho" ? 0.8 : 1}"/>`;
     });
-    s += `<line id="dv-kim" x1="${X(0)}" y1="${dinh - 4}" x2="${X(0)}" y2="${H - 6}" stroke="#111827"
+    s += `<line id="dv-kim" x1="${X(0)}" y1="${dinh - 4}" x2="${X(0)}" y2="${H - 6}" stroke="#fbbf24"
             stroke-width="1.5" stroke-dasharray="4 3" opacity="0"/>`;
     s += `</svg>`;
     khung.innerHTML = s;
@@ -254,7 +254,7 @@ COMMIT;`,
   function danhDauNguoiChan(ds) {
     $$("#timeline text.nhan-luong").forEach(t => {
       const co = ds.includes(t.dataset.luong);
-      t.setAttribute("fill", co ? "#dc2626" : "#1b1f24");
+      t.setAttribute("fill", co ? "#f87171" : "#cbd5e1");
       t.setAttribute("font-weight", co ? "700" : "400");
     });
   }
@@ -286,14 +286,15 @@ COMMIT;`,
                  ${vuot ? '<b style="color:var(--do)"> – đã bán vượt!</b>' : ""}`}</div>`;
     danh_sach_luong.forEach(l => {
       const cua = sk.filter(e => e.luong === l);
-      const dang = cua.find(e => e.bat_dau <= t && t <= e.ket_thuc);
+      // một câu lệnh đã kết thúc đúng tại t thì không còn "đang chạy" nữa
+      const dang = cua.find(e => e.bat_dau <= t && t < e.ket_thuc);
       let mau, chu;
       if (dang) {
         mau = mauLoai(dang.loai);
         chu = dang.nhan + (dang.loai === "cho_khoa" && dang.bi_chan_boi?.length ? ` – chờ ${dang.bi_chan_boi.join(", ")}` : "");
       } else if (!cua.length || t < cua[0].bat_dau) {
         mau = "#e5e7eb"; chu = "chưa bắt đầu";
-      } else if (t > cua[cua.length - 1].ket_thuc) {
+      } else if (t >= cua[cua.length - 1].ket_thuc) {
         const kq = du_lieu.ket_qua_khach[l] || {};
         [mau, chu] = TRANG_THAI_CUOI[kq.trang_thai] || ["#98a2b3", "đã xong"];
       } else {

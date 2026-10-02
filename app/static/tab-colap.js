@@ -149,10 +149,6 @@
     if (e.loai === "bi_chan") {
       const ai = (e.cho || []).map(c => `phiên ${esc(c.phien_cho)} đang chờ khóa do phiên ${esc(c.phien_giu)} giữ`).join("; ");
       html += `<div class="kq" style="color:var(--do)">Câu lệnh chưa trả về sau ${CHO_CHAN} ms – ${ai || "đang chờ khóa"}.</div>`;
-      if (e.khoa && e.khoa.length) {
-        html += `<details class="khoa" open><summary>Bảng khóa của InnoDB ngay lúc này (${e.khoa.length} khóa)</summary>
-          ${bangKhoa(e.khoa)}</details>`;
-      }
     }
     if (e.loai === "xong_sau_chan" && e.ket_qua) {
       html += `<div class="kq" style="color:var(--luc)">Được InnoDB cho chạy tiếp sau ${so(e.ket_qua.thoi_gian_ms)} ms chờ khóa.</div>`;
@@ -165,10 +161,15 @@
     return `<table class="lan"><tr><th class="stt">#</th><th class="pa">Phiên A</th><th class="pb">Phiên B</th></tr>
       ${su_kien.map((e, i) => {
         const nb = noi_bat.has(e.ma) && ["xong", "xong_sau_chan"].includes(e.loai);
+        // Bảng khóa có nhiều cột nên trải trên cả hai làn, không nhét vào một cột hẹp
+        const khoa = e.loai === "bi_chan" && e.khoa && e.khoa.length
+          ? `<tr class="dong-khoa"><td class="stt"></td><td colspan="2">
+              <details class="khoa" open><summary>Bảng khóa của InnoDB ngay lúc này (${e.khoa.length} khóa)</summary>
+              ${bangKhoa(e.khoa)}</details></td></tr>` : "";
         return `<tr class="${nb ? "noi-bat" : ""} ${i === moi ? "moi" : ""}">
           <td class="stt">${e.thu_tu}</td>
           <td class="o-buoc">${e.phien === "A" ? oBuoc(e) : ""}</td>
-          <td class="o-buoc">${e.phien === "B" ? oBuoc(e) : ""}</td></tr>`;
+          <td class="o-buoc">${e.phien === "B" ? oBuoc(e) : ""}</td></tr>${khoa}`;
       }).join("")}</table>`;
   }
 

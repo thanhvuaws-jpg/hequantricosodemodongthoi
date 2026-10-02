@@ -578,7 +578,8 @@ section[hidden] { display: none; }
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.o { display: flex; flex-direction: column; gap: 5px; }
+/* chỉ áp cho ô nhập liệu (div.o); ô ma trận ở tab 3 cũng có lớp "o" nhưng là <td> */
+div.o { display: flex; flex-direction: column; gap: 5px; }
 .o label {
   font-size: 12px;
   color: #cbd5e1;
@@ -1509,14 +1510,18 @@ tr:hover td { background: rgba(56, 189, 248, 0.04); }
   font-family: "JetBrains Mono", Consolas, monospace;
   font-weight: 600;
 }
+/* Bảng nhiều cột (vd. ghe) phải co lại vừa khung CSDL: cho chữ trong ô xuống dòng,
+   và nếu vẫn không đủ chỗ thì cuộn ngang thay vì bị cắt mất cột KHÓA ở mép phải */
+.bang-db { overflow-x: auto; }
 .bang-db table {
-  font-size: 12.5px;
+  width: 100%;
+  font-size: 12px;
   border: 1px solid rgba(56, 189, 248, 0.2);
   border-radius: 8px;
   overflow: hidden;
 }
-.bang-db th { position: static; padding: 5px 10px; background: rgba(15, 23, 42, 0.85); }
-.bang-db td { padding: 5px 10px; vertical-align: middle; transition: background 0.3s; }
+.bang-db th { position: static; padding: 5px 6px; background: rgba(15, 23, 42, 0.85); }
+.bang-db td { padding: 5px 6px; vertical-align: middle; transition: background 0.3s; white-space: normal; }
 .bang-db tr.dong-moi td { background: rgba(245, 158, 11, 0.12); }
 .bang-db tr.co-khoa td:first-child { box-shadow: inset 3px 0 0 #f43f5e; }
 .bang-db td.vua-doi { animation: doi-mau 1.4s ease-out; }
@@ -1748,6 +1753,8 @@ tr:hover td { background: rgba(56, 189, 248, 0.04); }
 .lan th.pa { color: #38bdf8; background: rgba(2, 132, 199, 0.18); }
 .lan th.pb { color: #c084fc; background: rgba(124, 58, 237, 0.18); }
 .lan td { padding: 8px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+/* bảng dùng table-layout: fixed nên độ rộng cột lấy từ hàng tiêu đề – phải đặt cho cả th */
+.lan th.stt { width: 44px; }
 .lan td.stt { width: 44px; color: #64748b; text-align: center; font-family: "JetBrains Mono", monospace; }
 
 .lan tr.moi td.o-buoc { animation: hien 0.5s ease-out; }
@@ -1785,7 +1792,9 @@ tr:hover td { background: rgba(56, 189, 248, 0.04); }
 .tt-bu { background: rgba(99, 102, 241, 0.25); color: #818cf8; }
 .tt-loi { background: #be123c; color: #fff; }
 
-details.khoa { margin-top: 8px; font-size: 12px; }
+details.khoa { margin-top: 8px; font-size: 12px; overflow-x: auto; }
+tr.dong-khoa td { padding-top: 0; }
+details.khoa td:last-child { min-width: 180px; }
 details.khoa summary { cursor: pointer; color: #fb7185; font-weight: 700; }
 details.khoa table { margin-top: 6px; font-size: 11.5px; }
 details.khoa td, details.khoa th { padding: 4px 8px; position: static; }
