@@ -1,0 +1,169 @@
+{
+ "cac_muc": [
+  5,
+  10,
+  20,
+  40
+ ],
+ "think_ms": 50,
+ "mo_ta": {
+  "khong_khoa": "Không dùng khóa (đọc rồi ghi đè)",
+  "bi_quan": "Khóa bi quan – SELECT … FOR UPDATE",
+  "lac_quan": "Khóa lạc quan – kiểm tra cột version",
+  "nguyen_tu": "Một câu UPDATE nguyên tử có điều kiện"
+ },
+ "chuoi": {
+  "khong_khoa": [
+   {
+    "so_khach": 5,
+    "ton_kho": 2,
+    "thoi_gian_ms": 114.3,
+    "ban_vuot": 3,
+    "thu_lai": 0,
+    "cho_khoa": 3,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 10,
+    "ton_kho": 5,
+    "thoi_gian_ms": 123.6,
+    "ban_vuot": 5,
+    "thu_lai": 0,
+    "cho_khoa": 6,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 20,
+    "ton_kho": 10,
+    "thoi_gian_ms": 211.6,
+    "ban_vuot": 10,
+    "thu_lai": 0,
+    "cho_khoa": 17,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 40,
+    "ton_kho": 20,
+    "thoi_gian_ms": 638.1,
+    "ban_vuot": 20,
+    "thu_lai": 0,
+    "cho_khoa": 37,
+    "bo_cuoc": 0
+   }
+  ],
+  "bi_quan": [
+   {
+    "so_khach": 5,
+    "ton_kho": 2,
+    "thoi_gian_ms": 123.4,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 4,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 10,
+    "ton_kho": 5,
+    "thoi_gian_ms": 319.9,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 9,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 20,
+    "ton_kho": 10,
+    "thoi_gian_ms": 617.4,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 19,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 40,
+    "ton_kho": 20,
+    "thoi_gian_ms": 1254.5,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 39,
+    "bo_cuoc": 0
+   }
+  ],
+  "lac_quan": [
+   {
+    "so_khach": 5,
+    "ton_kho": 2,
+    "thoi_gian_ms": 165.8,
+    "ban_vuot": 0,
+    "thu_lai": 7,
+    "cho_khoa": 0,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 10,
+    "ton_kho": 5,
+    "thoi_gian_ms": 477.2,
+    "ban_vuot": 0,
+    "thu_lai": 35,
+    "cho_khoa": 8,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 20,
+    "ton_kho": 10,
+    "thoi_gian_ms": 907.6,
+    "ban_vuot": 0,
+    "thu_lai": 109,
+    "cho_khoa": 16,
+    "bo_cuoc": 10
+   },
+   {
+    "so_khach": 40,
+    "ton_kho": 20,
+    "thoi_gian_ms": 986.5,
+    "ban_vuot": 0,
+    "thu_lai": 241,
+    "cho_khoa": 32,
+    "bo_cuoc": 27
+   }
+  ],
+  "nguyen_tu": [
+   {
+    "so_khach": 5,
+    "ton_kho": 2,
+    "thoi_gian_ms": 28.4,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 3,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 10,
+    "ton_kho": 5,
+    "thoi_gian_ms": 73.1,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 7,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 20,
+    "ton_kho": 10,
+    "thoi_gian_ms": 131.6,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 18,
+    "bo_cuoc": 0
+   },
+   {
+    "so_khach": 40,
+    "ton_kho": 20,
+    "thoi_gian_ms": 232.1,
+    "ban_vuot": 0,
+    "thu_lai": 0,
+    "cho_khoa": 38,
+    "bo_cuoc": 0
+   }
+  ]
+ }
+}

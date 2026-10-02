@@ -1,0 +1,2961 @@
+{
+ "tom_tat": {
+  "che_do": "lac_quan",
+  "mo_ta_che_do": "Khóa lạc quan – kiểm tra cột version",
+  "so_khach": 10,
+  "tong_ghe": 5,
+  "so_ghe_con_lai": 0,
+  "so_ve_da_ban": 5,
+  "ban_vuot": 0,
+  "nhat_quan": true,
+  "so_thanh_cong": 5,
+  "so_het_ve": 5,
+  "so_deadlock": 0,
+  "so_het_gio": 0,
+  "so_bo_cuoc": 0,
+  "so_loi": 0,
+  "so_lan_thu_lai": 35,
+  "so_lan_cho_khoa": 8,
+  "tong_thoi_gian_cho_khoa_ms": 116.3,
+  "thoi_gian_ms": 724.8,
+  "muc_co_lap": "mặc định (REPEATABLE READ)",
+  "think_ms": 100
+ },
+ "su_kien": [
+  {
+   "luong": "Khách 2",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.57,
+   "ket_thuc": 3.78,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.97,
+   "ket_thuc": 5.43,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.18,
+   "ket_thuc": 8.22,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.33,
+   "ket_thuc": 7.22,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.42,
+   "ket_thuc": 5.74,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.56,
+   "ket_thuc": 3.31,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.82,
+   "ket_thuc": 2.64,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.9,
+   "ket_thuc": 4.39,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 2.67,
+   "ket_thuc": 4.12,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 2.85,
+   "ket_thuc": 5.05,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 3.36,
+   "ket_thuc": 8.87,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 3.82,
+   "ket_thuc": 7.54,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 4.17,
+   "ket_thuc": 104.39,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 4.46,
+   "ket_thuc": 8.0,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 4.8,
+   "ket_thuc": 6.49,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 5.08,
+   "ket_thuc": 8.5,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 5.47,
+   "ket_thuc": 9.24,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 5.78,
+   "ket_thuc": 10.69,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 6.53,
+   "ket_thuc": 10.13,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 7.26,
+   "ket_thuc": 11.86,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 7.58,
+   "ket_thuc": 107.78,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 8.05,
+   "ket_thuc": 108.37,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 8.24,
+   "ket_thuc": 11.37,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5, version = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 8.54,
+   "ket_thuc": 108.84,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 8.93,
+   "ket_thuc": 109.1,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 9.28,
+   "ket_thuc": 109.57,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 10.2,
+   "ket_thuc": 110.69,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 10.76,
+   "ket_thuc": 110.98,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 11.42,
+   "ket_thuc": 111.59,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 11.94,
+   "ket_thuc": 112.19,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 104.47,
+   "ket_thuc": 106.36,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 106.42,
+   "ket_thuc": 108.18,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 8')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 107.84,
+   "ket_thuc": 123.86,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "bị chặn 16 ms vì chờ khóa do Khách 1 đang giữ · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 1"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 108.25,
+   "ket_thuc": 117.36,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 108.41,
+   "ket_thuc": 117.61,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 108.88,
+   "ket_thuc": 120.96,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 109.13,
+   "ket_thuc": 124.55,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "bị chặn 15 ms vì chờ khóa do Khách 1 đang giữ (xếp hàng cùng Khách 2) · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 1"
+   ],
+   "xep_hang_sau": [
+    "Khách 2"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 109.65,
+   "ket_thuc": 122.49,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 110.79,
+   "ket_thuc": 125.12,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "bị chặn 14 ms vì chờ khóa do lần lượt Khách 1 → Khách 2 giữ (xếp hàng cùng Khách 10) · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 1",
+    "Khách 2"
+   ],
+   "xep_hang_sau": [
+    "Khách 10"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 111.04,
+   "ket_thuc": 126.23,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "bị chặn 15 ms vì chờ khóa do Khách 2 đang giữ (xếp hàng cùng Khách 10, Khách 7) · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 2"
+   ],
+   "xep_hang_sau": [
+    "Khách 10",
+    "Khách 7"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 111.63,
+   "ket_thuc": 127.36,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "bị chặn 16 ms vì chờ khóa do Khách 2 đang giữ (xếp hàng cùng Khách 10, Khách 4, Khách 7) · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 2"
+   ],
+   "xep_hang_sau": [
+    "Khách 10",
+    "Khách 4",
+    "Khách 7"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 0",
+   "bat_dau": 112.23,
+   "ket_thuc": 128.83,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4, version = version + 1 WHERE ma_chuyen = 1 AND version = 0",
+   "ghi_chu": "bị chặn 17 ms vì chờ khóa do Khách 2 đang giữ (xếp hàng cùng Khách 10, Khách 4, Khách 7, Khách 9) · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 2"
+   ],
+   "xep_hang_sau": [
+    "Khách 10",
+    "Khách 4",
+    "Khách 7",
+    "Khách 9"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 117.68,
+   "ket_thuc": 121.93,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 121.04,
+   "ket_thuc": 122.81,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 122.63,
+   "ket_thuc": 123.69,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 123.91,
+   "ket_thuc": 124.89,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 124.59,
+   "ket_thuc": 125.01,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 125.16,
+   "ket_thuc": 126.03,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 126.29,
+   "ket_thuc": 127.7,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 127.42,
+   "ket_thuc": 128.35,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 128.04,
+   "ket_thuc": 128.6,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 128.63,
+   "ket_thuc": 130.28,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 128.89,
+   "ket_thuc": 130.6,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 1: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 129.17,
+   "ket_thuc": 129.78,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 129.82,
+   "ket_thuc": 131.46,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 130.4,
+   "ket_thuc": 230.61,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 131.51,
+   "ket_thuc": 231.72,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 135.12,
+   "ket_thuc": 136.31,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 136.35,
+   "ket_thuc": 138.08,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 137.41,
+   "ket_thuc": 138.43,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 138.18,
+   "ket_thuc": 238.36,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 138.3,
+   "ket_thuc": 139.07,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 138.44,
+   "ket_thuc": 140.19,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 138.6,
+   "ket_thuc": 139.81,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 139.1,
+   "ket_thuc": 141.11,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 139.26,
+   "ket_thuc": 140.73,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 139.84,
+   "ket_thuc": 141.9,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 140.29,
+   "ket_thuc": 240.58,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 140.76,
+   "ket_thuc": 142.26,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 141.16,
+   "ket_thuc": 241.35,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 141.44,
+   "ket_thuc": 142.44,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 141.95,
+   "ket_thuc": 242.09,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 142.31,
+   "ket_thuc": 243.01,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 142.47,
+   "ket_thuc": 144.04,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 142.71,
+   "ket_thuc": 143.58,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 143.63,
+   "ket_thuc": 145.08,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 4, version = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 144.1,
+   "ket_thuc": 244.27,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 145.14,
+   "ket_thuc": 248.21,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 230.66,
+   "ket_thuc": 232.32,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 231.77,
+   "ket_thuc": 244.62,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "bị chặn 13 ms vì chờ khóa do Khách 5 đang giữ · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 5"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 232.38,
+   "ket_thuc": 233.92,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 5')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 234.01,
+   "ket_thuc": 244.8,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho_khoa",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 238.49,
+   "ket_thuc": 248.64,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "bị chặn 10 ms vì chờ khóa do Khách 5 đang giữ (xếp hàng cùng Khách 2) · nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [
+    "Khách 5"
+   ],
+   "xep_hang_sau": [
+    "Khách 2"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 240.66,
+   "ket_thuc": 250.16,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 241.43,
+   "ket_thuc": 251.44,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 242.14,
+   "ket_thuc": 252.71,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 243.04,
+   "ket_thuc": 253.92,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 244.35,
+   "ket_thuc": 255.36,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 244.67,
+   "ket_thuc": 248.02,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 1",
+   "bat_dau": 248.27,
+   "ket_thuc": 256.52,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3, version = version + 1 WHERE ma_chuyen = 1 AND version = 1",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 248.7,
+   "ket_thuc": 249.91,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 250.22,
+   "ket_thuc": 251.21,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 251.51,
+   "ket_thuc": 252.45,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 252.76,
+   "ket_thuc": 254.16,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 253.98,
+   "ket_thuc": 255.17,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 255.4,
+   "ket_thuc": 256.36,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 256.6,
+   "ket_thuc": 257.16,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 2: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 262.35,
+   "ket_thuc": 263.18,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 263.21,
+   "ket_thuc": 264.33,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 263.59,
+   "ket_thuc": 264.53,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 264.4,
+   "ket_thuc": 364.65,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 264.54,
+   "ket_thuc": 266.08,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 265.74,
+   "ket_thuc": 266.7,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 266.15,
+   "ket_thuc": 366.4,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 266.73,
+   "ket_thuc": 268.23,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 268.33,
+   "ket_thuc": 368.82,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 272.88,
+   "ket_thuc": 273.53,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 273.22,
+   "ket_thuc": 273.76,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 273.57,
+   "ket_thuc": 274.94,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 273.78,
+   "ket_thuc": 274.71,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 273.92,
+   "ket_thuc": 275.24,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 274.76,
+   "ket_thuc": 375.13,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 274.98,
+   "ket_thuc": 379.15,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 275.27,
+   "ket_thuc": 276.95,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 277.01,
+   "ket_thuc": 379.53,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 279.1,
+   "ket_thuc": 279.85,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 279.88,
+   "ket_thuc": 281.11,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 280.57,
+   "ket_thuc": 281.57,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 281.2,
+   "ket_thuc": 381.38,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 281.61,
+   "ket_thuc": 283.01,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 3, version = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 283.08,
+   "ket_thuc": 383.26,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 364.74,
+   "ket_thuc": 366.97,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 366.47,
+   "ket_thuc": 374.02,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 367.05,
+   "ket_thuc": 368.62,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 2')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 368.7,
+   "ket_thuc": 374.29,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 368.83,
+   "ket_thuc": 378.89,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 374.08,
+   "ket_thuc": 375.02,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 375.17,
+   "ket_thuc": 380.88,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 378.98,
+   "ket_thuc": 380.02,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 379.2,
+   "ket_thuc": 381.83,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 379.58,
+   "ket_thuc": 382.82,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 380.94,
+   "ket_thuc": 381.67,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 381.43,
+   "ket_thuc": 383.87,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 381.87,
+   "ket_thuc": 382.5,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 382.87,
+   "ket_thuc": 383.71,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 2",
+   "bat_dau": 383.29,
+   "ket_thuc": 384.87,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2, version = version + 1 WHERE ma_chuyen = 1 AND version = 2",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 383.91,
+   "ket_thuc": 384.69,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 384.92,
+   "ket_thuc": 386.35,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 3: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 395.44,
+   "ket_thuc": 396.26,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 395.9,
+   "ket_thuc": 396.54,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 396.29,
+   "ket_thuc": 397.22,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 396.56,
+   "ket_thuc": 397.48,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 397.27,
+   "ket_thuc": 497.44,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 397.5,
+   "ket_thuc": 497.75,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 411.07,
+   "ket_thuc": 411.94,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 411.98,
+   "ket_thuc": 413.33,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 413.39,
+   "ket_thuc": 513.55,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 417.82,
+   "ket_thuc": 418.78,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 418.82,
+   "ket_thuc": 420.21,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 418.97,
+   "ket_thuc": 420.87,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 420.29,
+   "ket_thuc": 520.54,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 420.35,
+   "ket_thuc": 421.38,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 420.92,
+   "ket_thuc": 423.54,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 421.42,
+   "ket_thuc": 422.84,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 422.92,
+   "ket_thuc": 523.04,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 423.64,
+   "ket_thuc": 523.83,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 424.75,
+   "ket_thuc": 425.42,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 425.45,
+   "ket_thuc": 426.91,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 2, version = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 426.99,
+   "ket_thuc": 527.15,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 497.51,
+   "ket_thuc": 509.32,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 497.77,
+   "ket_thuc": 500.94,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 501.02,
+   "ket_thuc": 502.84,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 6')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 502.94,
+   "ket_thuc": 508.97,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 509.41,
+   "ket_thuc": 513.06,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 4: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 513.61,
+   "ket_thuc": 515.15,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 515.22,
+   "ket_thuc": 516.09,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 4: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 520.64,
+   "ket_thuc": 522.73,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 522.79,
+   "ket_thuc": 523.34,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 4: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 523.06,
+   "ket_thuc": 524.48,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 523.89,
+   "ket_thuc": 525.61,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 524.55,
+   "ket_thuc": 525.22,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 4: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 525.68,
+   "ket_thuc": 526.79,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 4: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 3",
+   "bat_dau": 527.19,
+   "ket_thuc": 528.99,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1, version = version + 1 WHERE ma_chuyen = 1 AND version = 3",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 529.07,
+   "ket_thuc": 530.03,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 4: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 530.9,
+   "ket_thuc": 531.92,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 531.98,
+   "ket_thuc": 533.71,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 1, version = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 533.78,
+   "ket_thuc": 634.0,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 548.39,
+   "ket_thuc": 549.63,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 548.58,
+   "ket_thuc": 549.27,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 549.32,
+   "ket_thuc": 551.18,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 1, version = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 549.67,
+   "ket_thuc": 551.56,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 1, version = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 551.24,
+   "ket_thuc": 651.41,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 551.62,
+   "ket_thuc": 651.8,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 556.29,
+   "ket_thuc": 557.06,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 556.71,
+   "ket_thuc": 557.23,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 557.08,
+   "ket_thuc": 558.0,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 1, version = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 557.25,
+   "ket_thuc": 558.26,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 1, version = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 558.04,
+   "ket_thuc": 658.22,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 558.3,
+   "ket_thuc": 658.53,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 566.78,
+   "ket_thuc": 567.8,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 567.84,
+   "ket_thuc": 569.23,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 1, version = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 569.28,
+   "ket_thuc": 669.54,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 4",
+   "bat_dau": 634.06,
+   "ket_thuc": 636.01,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0, version = version + 1 WHERE ma_chuyen = 1 AND version = 4",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 636.08,
+   "ket_thuc": 637.89,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 3')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 637.98,
+   "ket_thuc": 645.13,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 4",
+   "bat_dau": 651.48,
+   "ket_thuc": 652.94,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0, version = version + 1 WHERE ma_chuyen = 1 AND version = 4",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 4",
+   "bat_dau": 651.86,
+   "ket_thuc": 654.16,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0, version = version + 1 WHERE ma_chuyen = 1 AND version = 4",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 653.06,
+   "ket_thuc": 654.42,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 5: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 654.22,
+   "ket_thuc": 654.93,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 5: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 4",
+   "bat_dau": 658.28,
+   "ket_thuc": 659.77,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0, version = version + 1 WHERE ma_chuyen = 1 AND version = 4",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 4",
+   "bat_dau": 658.64,
+   "ket_thuc": 660.85,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0, version = version + 1 WHERE ma_chuyen = 1 AND version = 4",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 659.84,
+   "ket_thuc": 660.52,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 5: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 660.91,
+   "ket_thuc": 661.48,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 5: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi nếu version vẫn là 4",
+   "bat_dau": 669.64,
+   "ket_thuc": 671.83,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0, version = version + 1 WHERE ma_chuyen = 1 AND version = 4",
+   "ghi_chu": "nếu có người khác đã sửa trước thì version đã đổi, số dòng tác động = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – va chạm version",
+   "bat_dau": 671.9,
+   "ket_thuc": 672.85,
+   "sql": "ROLLBACK",
+   "ghi_chu": "lần thử 5: có người ghi trước, phải đọc lại và thử lại",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 682.04,
+   "ket_thuc": 683.24,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 683.27,
+   "ket_thuc": 684.6,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 0, version = 5",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 684.67,
+   "ket_thuc": 685.52,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 685.32,
+   "ket_thuc": 685.78,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 685.81,
+   "ket_thuc": 689.3,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 0, version = 5",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 686.22,
+   "ket_thuc": 690.11,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 689.35,
+   "ket_thuc": 690.49,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 689.92,
+   "ket_thuc": 690.68,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 690.14,
+   "ket_thuc": 693.39,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 0, version = 5",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 690.7,
+   "ket_thuc": 693.77,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 0, version = 5",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 693.45,
+   "ket_thuc": 694.42,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 693.8,
+   "ket_thuc": 694.76,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 717.38,
+   "ket_thuc": 718.44,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn + version",
+   "bat_dau": 718.48,
+   "ket_thuc": 720.95,
+   "sql": "SELECT so_ghe_trong, version FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 0, version = 5",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 721.02,
+   "ket_thuc": 722.23,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  }
+ ],
+ "ket_qua_khach": {
+  "Khách 8": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6197
+  },
+  "Khách 5": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 2,
+   "ma_ket_noi": 6196
+  },
+  "Khách 2": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 3,
+   "ma_ket_noi": 6188
+  },
+  "Khách 6": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 4,
+   "ma_ket_noi": 6192
+  },
+  "Khách 3": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 5,
+   "ma_ket_noi": 6190
+  },
+  "Khách 9": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 6,
+   "ma_ket_noi": 6191
+  },
+  "Khách 7": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 6,
+   "ma_ket_noi": 6195
+  },
+  "Khách 1": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 6,
+   "ma_ket_noi": 6189
+  },
+  "Khách 10": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 6,
+   "ma_ket_noi": 6194
+  },
+  "Khách 4": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 6,
+   "ma_ket_noi": 6193
+  }
+ },
+ "cho_khoa": [
+  {
+   "moc": 116.8,
+   "conn_cho": 6188,
+   "conn_giu": 6189,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6194,
+   "conn_giu": 6189,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6194,
+   "conn_giu": 6188,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6195,
+   "conn_giu": 6189,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6195,
+   "conn_giu": 6188,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6195,
+   "conn_giu": 6194,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6193,
+   "conn_giu": 6188,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6193,
+   "conn_giu": 6194,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6193,
+   "conn_giu": 6195,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6191,
+   "conn_giu": 6188,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6191,
+   "conn_giu": 6194,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6191,
+   "conn_giu": 6195,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6191,
+   "conn_giu": 6193,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6190,
+   "conn_giu": 6188,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6190,
+   "conn_giu": 6194,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6190,
+   "conn_giu": 6195,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6190,
+   "conn_giu": 6193,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 116.8,
+   "conn_cho": 6190,
+   "conn_giu": 6191,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 237.52,
+   "conn_cho": 6188,
+   "conn_giu": 6196,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 237.52,
+   "conn_cho": 6192,
+   "conn_giu": 6196,
+   "dang_giu": true,
+   "ten_cho": "Khách 6",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 237.52,
+   "conn_cho": 6192,
+   "conn_giu": 6188,
+   "dang_giu": false,
+   "ten_cho": "Khách 6",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 237.52,
+   "conn_cho": 6190,
+   "conn_giu": 6196,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 237.52,
+   "conn_cho": 6190,
+   "conn_giu": 6188,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 237.52,
+   "conn_cho": 6190,
+   "conn_giu": 6192,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 6"
+  }
+ ],
+ "khoa_quan_sat": [
+  {
+   "moc": 116.8,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 2",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 3",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 6",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 237.52,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 6",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 2",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 116.8,
+   "ten": "Khách 3",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 237.52,
+   "ten": "Khách 5",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 505.75,
+   "ten": "Khách 6",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  }
+ ],
+ "trang_thai_sau": {
+  "chuyen_bay": {
+   "ma_chuyen": 1,
+   "so_hieu": "Chuyến bay VN-808 (Hà Nội - TP.HCM)",
+   "tong_ghe": 5,
+   "so_ghe_trong": 0,
+   "version": 5
+  },
+  "so_ve_ban": 5,
+  "ghe": [
+   {
+    "ma_ghe": 1,
+    "so_ghe": "12A",
+    "trang_thai": "trong",
+    "nguoi_giu": null
+   },
+   {
+    "ma_ghe": 2,
+    "so_ghe": "12B",
+    "trang_thai": "trong",
+    "nguoi_giu": null
+   }
+  ]
+ }
+}

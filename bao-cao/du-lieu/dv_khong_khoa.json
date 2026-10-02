@@ -1,0 +1,1398 @@
+{
+ "tom_tat": {
+  "che_do": "khong_khoa",
+  "mo_ta_che_do": "Không dùng khóa (đọc rồi ghi đè)",
+  "so_khach": 10,
+  "tong_ghe": 5,
+  "so_ghe_con_lai": 4,
+  "so_ve_da_ban": 10,
+  "ban_vuot": 5,
+  "nhat_quan": false,
+  "so_thanh_cong": 10,
+  "so_het_ve": 0,
+  "so_deadlock": 0,
+  "so_het_gio": 0,
+  "so_bo_cuoc": 0,
+  "so_loi": 0,
+  "so_lan_thu_lai": 0,
+  "so_lan_cho_khoa": 8,
+  "tong_thoi_gian_cho_khoa_ms": 442.0,
+  "thoi_gian_ms": 217.6,
+  "muc_co_lap": "mặc định (REPEATABLE READ)",
+  "think_ms": 100
+ },
+ "su_kien": [
+  {
+   "luong": "Khách 2",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.64,
+   "ket_thuc": 5.7,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.88,
+   "ket_thuc": 4.74,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.1,
+   "ket_thuc": 4.45,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.32,
+   "ket_thuc": 5.01,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.49,
+   "ket_thuc": 3.71,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.65,
+   "ket_thuc": 2.09,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.94,
+   "ket_thuc": 7.07,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 2.12,
+   "ket_thuc": 5.99,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 2.89,
+   "ket_thuc": 6.85,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 3.13,
+   "ket_thuc": 9.36,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 3.3,
+   "ket_thuc": 5.54,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 3.74,
+   "ket_thuc": 8.67,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 4.49,
+   "ket_thuc": 8.0,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 4.78,
+   "ket_thuc": 6.55,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 5.03,
+   "ket_thuc": 7.38,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 5.57,
+   "ket_thuc": 8.99,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 5.72,
+   "ket_thuc": 9.23,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 6.04,
+   "ket_thuc": 106.19,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 6.6,
+   "ket_thuc": 106.84,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 6.89,
+   "ket_thuc": 9.91,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 7.08,
+   "ket_thuc": 9.72,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 7.44,
+   "ket_thuc": 107.68,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 8.06,
+   "ket_thuc": 108.43,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 8.71,
+   "ket_thuc": 109.34,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 9.04,
+   "ket_thuc": 110.26,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 9.25,
+   "ket_thuc": 110.52,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "doc",
+   "nhan": "đọc số ghế còn (không khóa)",
+   "bat_dau": 9.38,
+   "ket_thuc": 10.74,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đọc nhất quán theo MVCC, không đặt khóa nào",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 9.76,
+   "ket_thuc": 111.32,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 9.93,
+   "ket_thuc": 111.52,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 10.91,
+   "ket_thuc": 112.31,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 106.25,
+   "ket_thuc": 108.04,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 106.9,
+   "ket_thuc": 116.31,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 9 ms vì chờ khóa do Khách 5 đang giữ · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 5"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 107.72,
+   "ket_thuc": 129.47,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 22 ms vì chờ khóa do Khách 5 đang giữ (xếp hàng cùng Khách 6) · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 5"
+   ],
+   "xep_hang_sau": [
+    "Khách 6"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 108.1,
+   "ket_thuc": 109.84,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 5')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 108.48,
+   "ket_thuc": 139.23,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 109.38,
+   "ket_thuc": 151.66,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 42 ms vì chờ khóa do Khách 4 đang giữ · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 4"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 109.91,
+   "ket_thuc": 116.57,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 110.33,
+   "ket_thuc": 163.38,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 53 ms vì chờ khóa do Khách 4 đang giữ (xếp hàng cùng Khách 10) · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 4"
+   ],
+   "xep_hang_sau": [
+    "Khách 10"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 110.53,
+   "ket_thuc": 175.69,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 65 ms vì chờ khóa do lần lượt Khách 4 → Khách 9 giữ (xếp hàng cùng Khách 10) · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 4",
+    "Khách 9"
+   ],
+   "xep_hang_sau": [
+    "Khách 10"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 111.35,
+   "ket_thuc": 194.95,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 84 ms vì chờ khóa do lần lượt Khách 4 → Khách 9 giữ (xếp hàng cùng Khách 1, Khách 10, Khách 2) · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 4",
+    "Khách 9"
+   ],
+   "xep_hang_sau": [
+    "Khách 1",
+    "Khách 10",
+    "Khách 2"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 111.58,
+   "ket_thuc": 185.01,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 73 ms vì chờ khóa do lần lượt Khách 4 → Khách 9 giữ (xếp hàng cùng Khách 10, Khách 2) · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 4",
+    "Khách 9"
+   ],
+   "xep_hang_sau": [
+    "Khách 10",
+    "Khách 2"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho_khoa",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 112.37,
+   "ket_thuc": 205.7,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "bị chặn 93 ms vì chờ khóa do lần lượt Khách 4 → Khách 9 → Khách 7 giữ (xếp hàng cùng Khách 1, Khách 10, Khách 2) · ghi đè bằng giá trị tự tính 5 − 1 = 4 – nguồn gốc của lost update",
+   "bi_chan_boi": [
+    "Khách 4",
+    "Khách 9",
+    "Khách 7"
+   ],
+   "xep_hang_sau": [
+    "Khách 1",
+    "Khách 10",
+    "Khách 2"
+   ],
+   "loai_goc": "ghi"
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 116.38,
+   "ket_thuc": 119.9,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 6')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 120.0,
+   "ket_thuc": 129.23,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 129.52,
+   "ket_thuc": 132.97,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 8')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 133.09,
+   "ket_thuc": 139.01,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 139.29,
+   "ket_thuc": 141.75,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 4')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 141.82,
+   "ket_thuc": 151.35,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 151.72,
+   "ket_thuc": 154.89,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 10')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 154.98,
+   "ket_thuc": 163.02,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 163.47,
+   "ket_thuc": 167.3,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 9')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 167.38,
+   "ket_thuc": 175.4,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 175.72,
+   "ket_thuc": 178.54,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 2')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 178.62,
+   "ket_thuc": 184.78,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 185.06,
+   "ket_thuc": 188.31,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 1')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 188.42,
+   "ket_thuc": 194.7,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 195.0,
+   "ket_thuc": 197.27,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 7')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 197.63,
+   "ket_thuc": 205.99,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 205.75,
+   "ket_thuc": 207.17,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 3')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 207.27,
+   "ket_thuc": 214.93,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  }
+ ],
+ "ket_qua_khach": {
+  "Khách 5": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6164
+  },
+  "Khách 6": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6160
+  },
+  "Khách 8": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6159
+  },
+  "Khách 4": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6157
+  },
+  "Khách 10": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6162
+  },
+  "Khách 9": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6166
+  },
+  "Khách 2": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6158
+  },
+  "Khách 1": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6161
+  },
+  "Khách 7": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6163
+  },
+  "Khách 3": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6165
+  }
+ },
+ "cho_khoa": [
+  {
+   "moc": 107.27,
+   "conn_cho": 6160,
+   "conn_giu": 6164,
+   "dang_giu": true,
+   "ten_cho": "Khách 6",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6159,
+   "conn_giu": 6164,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6159,
+   "conn_giu": 6160,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6157,
+   "conn_giu": 6164,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6157,
+   "conn_giu": 6160,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6157,
+   "conn_giu": 6159,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6162,
+   "conn_giu": 6164,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6162,
+   "conn_giu": 6160,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6162,
+   "conn_giu": 6159,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 107.27,
+   "conn_cho": 6162,
+   "conn_giu": 6157,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6162,
+   "conn_giu": 6157,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6166,
+   "conn_giu": 6157,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6166,
+   "conn_giu": 6162,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6158,
+   "conn_giu": 6157,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6158,
+   "conn_giu": 6162,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6158,
+   "conn_giu": 6166,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6161,
+   "conn_giu": 6157,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6161,
+   "conn_giu": 6162,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6161,
+   "conn_giu": 6166,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6161,
+   "conn_giu": 6158,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6163,
+   "conn_giu": 6157,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6163,
+   "conn_giu": 6162,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6163,
+   "conn_giu": 6166,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6163,
+   "conn_giu": 6158,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6163,
+   "conn_giu": 6161,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6165,
+   "conn_giu": 6157,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6165,
+   "conn_giu": 6162,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6165,
+   "conn_giu": 6166,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6165,
+   "conn_giu": 6158,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6165,
+   "conn_giu": 6161,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 136.43,
+   "conn_cho": 6165,
+   "conn_giu": 6163,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6158,
+   "conn_giu": 6166,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6161,
+   "conn_giu": 6166,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6161,
+   "conn_giu": 6158,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6163,
+   "conn_giu": 6166,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6163,
+   "conn_giu": 6158,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6163,
+   "conn_giu": 6161,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6165,
+   "conn_giu": 6166,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6165,
+   "conn_giu": 6158,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 2"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6165,
+   "conn_giu": 6161,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 167.7,
+   "conn_cho": 6165,
+   "conn_giu": 6163,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 198.29,
+   "conn_cho": 6165,
+   "conn_giu": 6163,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  }
+ ],
+ "khoa_quan_sat": [
+  {
+   "moc": 107.27,
+   "ten": "Khách 6",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 2",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 3",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 107.27,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 8",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 167.7,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 198.29,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 107.27,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 107.27,
+   "ten": "Khách 6",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 8",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 8",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 2",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 136.43,
+   "ten": "Khách 3",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 167.7,
+   "ten": "Khách 9",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 198.29,
+   "ten": "Khách 7",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  }
+ ],
+ "trang_thai_sau": {
+  "chuyen_bay": {
+   "ma_chuyen": 1,
+   "so_hieu": "Chuyến bay VN-808 (Hà Nội - TP.HCM)",
+   "tong_ghe": 5,
+   "so_ghe_trong": 4,
+   "version": 0
+  },
+  "so_ve_ban": 10,
+  "ghe": [
+   {
+    "ma_ghe": 1,
+    "so_ghe": "12A",
+    "trang_thai": "trong",
+    "nguoi_giu": null
+   },
+   {
+    "ma_ghe": 2,
+    "so_ghe": "12B",
+    "trang_thai": "trong",
+    "nguoi_giu": null
+   }
+  ]
+ }
+}

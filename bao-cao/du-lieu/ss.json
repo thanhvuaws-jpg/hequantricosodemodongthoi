@@ -1,0 +1,67 @@
+{
+ "dieu_kien": {
+  "so_khach": 10,
+  "ton_kho": 5,
+  "think_ms": 80,
+  "so_lan": 3,
+  "muc_co_lap": "mặc định"
+ },
+ "ket_qua": {
+  "khong_khoa": {
+   "mo_ta": "Không dùng khóa (đọc rồi ghi đè)",
+   "so_lan_chay": 3,
+   "thoi_gian_tb": 176.8,
+   "thoi_gian_min": 171.4,
+   "thoi_gian_max": 180.8,
+   "ve_ban_tb": 10,
+   "ban_vuot_tb": 5,
+   "thu_lai_tb": 0,
+   "cho_khoa_tb": 6.33,
+   "deadlock_tb": 0,
+   "bo_cuoc_tb": 0,
+   "so_lan_sai": 3
+  },
+  "bi_quan": {
+   "mo_ta": "Khóa bi quan – SELECT … FOR UPDATE",
+   "so_lan_chay": 3,
+   "thoi_gian_tb": 485.6,
+   "thoi_gian_min": 475.2,
+   "thoi_gian_max": 505.6,
+   "ve_ban_tb": 5,
+   "ban_vuot_tb": 0,
+   "thu_lai_tb": 0,
+   "cho_khoa_tb": 9,
+   "deadlock_tb": 0,
+   "bo_cuoc_tb": 0,
+   "so_lan_sai": 0
+  },
+  "lac_quan": {
+   "mo_ta": "Khóa lạc quan – kiểm tra cột version",
+   "so_lan_chay": 3,
+   "thoi_gian_tb": 654.7,
+   "thoi_gian_min": 643.6,
+   "thoi_gian_max": 662.3,
+   "ve_ban_tb": 5,
+   "ban_vuot_tb": 0,
+   "thu_lai_tb": 35,
+   "cho_khoa_tb": 4,
+   "deadlock_tb": 0,
+   "bo_cuoc_tb": 0,
+   "so_lan_sai": 0
+  },
+  "nguyen_tu": {
+   "mo_ta": "Một câu UPDATE nguyên tử có điều kiện",
+   "so_lan_chay": 3,
+   "thoi_gian_tb": 92.4,
+   "thoi_gian_min": 68.6,
+   "thoi_gian_max": 132.7,
+   "ve_ban_tb": 5,
+   "ban_vuot_tb": 0,
+   "thu_lai_tb": 0,
+   "cho_khoa_tb": 7.33,
+   "deadlock_tb": 0,
+   "bo_cuoc_tb": 0,
+   "so_lan_sai": 0
+  }
+ }
+}

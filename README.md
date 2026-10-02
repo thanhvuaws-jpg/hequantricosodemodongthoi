@@ -31,6 +31,22 @@ Sau đó vào thư mục vừa clone và nhấp đúp:
 
 Cổng dùng: **8010** (web) và **3310** (MySQL), không đụng MySQL có sẵn trên máy.
 
+## Báo cáo tiểu luận
+
+Thư mục `bao-cao/` chứa báo cáo theo đúng file format của trường (`format tieu luan.docx`):
+
+- `BaoCao_TieuLuan_DieuKhienTruyXuatDongThoi.docx` (và bản `.pdf`) – 74 trang, 43 hình, 17 bảng,
+  mục lục và danh mục bảng/hình tự động. Trang bìa còn để trống tên giảng viên, MSSV, lớp và các
+  thành viên khác để nhóm tự điền.
+- `hinh/` – ảnh chụp giao diện và sơ đồ; `du-lieu/` – số liệu JSON của đúng lần chạy đã chụp.
+- `cong-cu/` – công cụ dựng lại báo cáo khi ứng dụng thay đổi (cần ứng dụng đang chạy):
+
+```bash
+cd bao-cao/cong-cu && python chup_giao_dien.py && python so_do.py && python tao_bao_cao.py
+```
+
+Sau đó chạy `cap_nhat_word.ps1` (hoặc mở file Word, bấm Ctrl+A rồi F9) để cập nhật mục lục và số trang.
+
 ## Chạy ứng dụng
 
 Cách nhanh nhất trên Windows: nhấp đúp **`khoi-dong.bat`** (tự mở Docker Desktop nếu

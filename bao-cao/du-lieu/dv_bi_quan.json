@@ -1,0 +1,5104 @@
+{
+ "tom_tat": {
+  "che_do": "bi_quan",
+  "mo_ta_che_do": "Khóa bi quan – SELECT … FOR UPDATE",
+  "so_khach": 10,
+  "tong_ghe": 5,
+  "so_ghe_con_lai": 0,
+  "so_ve_da_ban": 5,
+  "ban_vuot": 0,
+  "nhat_quan": true,
+  "so_thanh_cong": 5,
+  "so_het_ve": 5,
+  "so_deadlock": 0,
+  "so_het_gio": 0,
+  "so_bo_cuoc": 0,
+  "so_loi": 0,
+  "so_lan_thu_lai": 0,
+  "so_lan_cho_khoa": 9,
+  "tong_thoi_gian_cho_khoa_ms": 3928.9,
+  "thoi_gian_ms": 581.5,
+  "muc_co_lap": "mặc định (REPEATABLE READ)",
+  "think_ms": 100
+ },
+ "su_kien": [
+  {
+   "luong": "Khách 4",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.47,
+   "ket_thuc": 2.22,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.65,
+   "ket_thuc": 1.94,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 0.8,
+   "ket_thuc": 1.45,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.12,
+   "ket_thuc": 6.68,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.2,
+   "ket_thuc": 4.04,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.3,
+   "ket_thuc": 6.05,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "doc",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 1.48,
+   "ket_thuc": 2.59,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "đọc được so_ghe_trong = 5 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 1.59,
+   "ket_thuc": 4.43,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 1.98,
+   "ket_thuc": 115.08,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 113 ms vì chờ khóa do Khách 6 đang giữ · đọc được so_ghe_trong = 4 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 2.25,
+   "ket_thuc": 228.21,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 226 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 giữ · đọc được so_ghe_trong = 3 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 2.63,
+   "ket_thuc": 102.87,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 2.92,
+   "ket_thuc": 5.76,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 3.21,
+   "ket_thuc": 3.7,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 3.74,
+   "ket_thuc": 340.47,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 337 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 giữ · đọc được so_ghe_trong = 2 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 4.06,
+   "ket_thuc": 449.9,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 446 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 → Khách 1 giữ · đọc được so_ghe_trong = 1 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4",
+    "Khách 1"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 4.45,
+   "ket_thuc": 560.09,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 556 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 → Khách 1 → Khách 10 giữ · đọc được so_ghe_trong = 0 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4",
+    "Khách 1",
+    "Khách 10"
+   ],
+   "xep_hang_sau": [],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "begin",
+   "nhan": "START TRANSACTION",
+   "bat_dau": 4.62,
+   "ket_thuc": 7.87,
+   "sql": "START TRANSACTION",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 5.8,
+   "ket_thuc": 564.21,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 558 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 → Khách 1 → Khách 10 giữ (xếp hàng cùng Khách 7) · đọc được so_ghe_trong = 0 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4",
+    "Khách 1",
+    "Khách 10"
+   ],
+   "xep_hang_sau": [
+    "Khách 7"
+   ],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 6.09,
+   "ket_thuc": 567.86,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 562 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 → Khách 1 → Khách 10 giữ (xếp hàng cùng Khách 7, Khách 8) · đọc được so_ghe_trong = 0 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4",
+    "Khách 1",
+    "Khách 10"
+   ],
+   "xep_hang_sau": [
+    "Khách 7",
+    "Khách 8"
+   ],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 6.74,
+   "ket_thuc": 571.52,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 565 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 → Khách 1 → Khách 10 giữ (xếp hàng cùng Khách 3, Khách 7, Khách 8) · đọc được so_ghe_trong = 0 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4",
+    "Khách 1",
+    "Khách 10"
+   ],
+   "xep_hang_sau": [
+    "Khách 3",
+    "Khách 7",
+    "Khách 8"
+   ],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "cho_khoa",
+   "nhan": "đọc và khóa dòng (FOR UPDATE)",
+   "bat_dau": 7.91,
+   "ket_thuc": 574.61,
+   "sql": "SELECT so_ghe_trong FROM chuyen_bay WHERE ma_chuyen = 1 FOR UPDATE",
+   "ghi_chu": "bị chặn 567 ms vì chờ khóa do lần lượt Khách 6 → Khách 5 → Khách 4 → Khách 1 → Khách 10 giữ (xếp hàng cùng Khách 3, Khách 7, Khách 8, Khách 9) · đọc được so_ghe_trong = 0 – đặt khóa X lên dòng, giao tác khác phải xếp hàng",
+   "bi_chan_boi": [
+    "Khách 6",
+    "Khách 5",
+    "Khách 4",
+    "Khách 1",
+    "Khách 10"
+   ],
+   "xep_hang_sau": [
+    "Khách 3",
+    "Khách 7",
+    "Khách 8",
+    "Khách 9"
+   ],
+   "loai_goc": "doc"
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 4",
+   "bat_dau": 102.96,
+   "ket_thuc": 105.29,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 4 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 5 − 1 = 4",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 105.53,
+   "ket_thuc": 107.23,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 6')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 6",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 107.3,
+   "ket_thuc": 114.73,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 115.13,
+   "ket_thuc": 215.33,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 3",
+   "bat_dau": 215.39,
+   "ket_thuc": 217.22,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 3 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 4 − 1 = 3",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 217.44,
+   "ket_thuc": 218.76,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 5')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 5",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 218.84,
+   "ket_thuc": 227.84,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 228.33,
+   "ket_thuc": 328.58,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 2",
+   "bat_dau": 328.67,
+   "ket_thuc": 330.59,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 2 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 3 − 1 = 2",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 330.79,
+   "ket_thuc": 332.26,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 4')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 4",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 332.33,
+   "ket_thuc": 340.11,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 340.52,
+   "ket_thuc": 440.73,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 1",
+   "bat_dau": 440.8,
+   "ket_thuc": 442.54,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 1 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 2 − 1 = 1",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 442.66,
+   "ket_thuc": 444.25,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 1')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 1",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 444.32,
+   "ket_thuc": 449.59,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "cho",
+   "nhan": "khách đang cân nhắc",
+   "bat_dau": 449.94,
+   "ket_thuc": 550.56,
+   "sql": "",
+   "ghi_chu": "giao tác vẫn đang mở, chưa commit",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi đè số ghế = 0",
+   "bat_dau": 550.61,
+   "ket_thuc": 552.32,
+   "sql": "UPDATE chuyen_bay SET so_ghe_trong = 0 WHERE ma_chuyen = 1",
+   "ghi_chu": "ghi đè bằng giá trị tự tính 1 − 1 = 0",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "ghi",
+   "nhan": "ghi vé mới",
+   "bat_dau": 552.38,
+   "ket_thuc": 553.79,
+   "sql": "INSERT INTO ve (ma_chuyen, hanh_khach) VALUES (1, 'Khách 10')",
+   "ghi_chu": "",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 10",
+   "loai": "commit",
+   "nhan": "COMMIT",
+   "bat_dau": 553.89,
+   "ket_thuc": 559.71,
+   "sql": "COMMIT",
+   "ghi_chu": "đặt vé thành công",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 7",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 560.2,
+   "ket_thuc": 563.77,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 8",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 564.27,
+   "ket_thuc": 567.37,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 3",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 567.99,
+   "ket_thuc": 571.11,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 9",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 571.58,
+   "ket_thuc": 574.23,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  },
+  {
+   "luong": "Khách 2",
+   "loai": "rollback",
+   "nhan": "ROLLBACK – hết vé",
+   "bat_dau": 574.66,
+   "ket_thuc": 577.88,
+   "sql": "ROLLBACK",
+   "ghi_chu": "không còn ghế trống",
+   "bi_chan_boi": [],
+   "xep_hang_sau": []
+  }
+ ],
+ "ket_qua_khach": {
+  "Khách 6": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6180
+  },
+  "Khách 5": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6175
+  },
+  "Khách 4": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6174
+  },
+  "Khách 1": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6172
+  },
+  "Khách 10": {
+   "trang_thai": "thanh_cong",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6181
+  },
+  "Khách 7": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6176
+  },
+  "Khách 8": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6179
+  },
+  "Khách 3": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6173
+  },
+  "Khách 9": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6177
+  },
+  "Khách 2": {
+   "trang_thai": "het_ve",
+   "so_lan_thu": 1,
+   "ma_ket_noi": 6178
+  }
+ },
+ "cho_khoa": [
+  {
+   "moc": 1.79,
+   "conn_cho": 6175,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 5",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6174,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6172,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6181,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6176,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 1.79,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6175,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 5",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6174,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6172,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6181,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6176,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6179,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 32.56,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6175,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 5",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6174,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6172,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6181,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6176,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6179,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 62.79,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6175,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 5",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6174,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6172,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6181,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6176,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6179,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6180,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 6"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 93.68,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 125.15,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 156.39,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 187.66,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6174,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 4",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6172,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6181,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6176,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6179,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6173,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6175,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 5"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 218.05,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 249.73,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 279.93,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6172,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 1",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6181,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6176,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6179,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6173,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6177,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6174,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 4"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 310.39,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 340.62,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 372.83,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 402.96,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6181,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 10",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6176,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6179,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6173,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6177,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6178,
+   "conn_giu": 6172,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 1"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 434.08,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 464.45,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 495.18,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 525.04,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6176,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 7",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6179,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6179,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 8",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6173,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6173,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6173,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 3",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6177,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6177,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6177,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6177,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 9",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6178,
+   "conn_giu": 6181,
+   "dang_giu": true,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 10"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6178,
+   "conn_giu": 6176,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 7"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6178,
+   "conn_giu": 6179,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 8"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6178,
+   "conn_giu": 6173,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 3"
+  },
+  {
+   "moc": 554.8,
+   "conn_cho": 6178,
+   "conn_giu": 6177,
+   "dang_giu": false,
+   "ten_cho": "Khách 2",
+   "ten_giu": "Khách 9"
+  }
+ ],
+ "khoa_quan_sat": [
+  {
+   "moc": 1.79,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 8",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 3",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 2",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "WAITING",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 1.79,
+   "ten": "Khách 6",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 125.15,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 249.73,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 340.62,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 464.45,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": "PRIMARY",
+   "loai_khoa": "RECORD",
+   "che_do_khoa": "X,REC_NOT_GAP",
+   "trang_thai": "GRANTED",
+   "du_lieu": "1"
+  },
+  {
+   "moc": 1.79,
+   "ten": "Khách 6",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 1.79,
+   "ten": "Khách 5",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 4",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 10",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 1",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 7",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 8",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 3",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 9",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 32.56,
+   "ten": "Khách 2",
+   "bang": "chuyen_bay",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 218.05,
+   "ten": "Khách 5",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  },
+  {
+   "moc": 554.8,
+   "ten": "Khách 10",
+   "bang": "ve",
+   "chi_muc": null,
+   "loai_khoa": "TABLE",
+   "che_do_khoa": "IX",
+   "trang_thai": "GRANTED",
+   "du_lieu": null
+  }
+ ],
+ "trang_thai_sau": {
+  "chuyen_bay": {
+   "ma_chuyen": 1,
+   "so_hieu": "Chuyến bay VN-808 (Hà Nội - TP.HCM)",
+   "tong_ghe": 5,
+   "so_ghe_trong": 0,
+   "version": 0
+  },
+  "so_ve_ban": 5,
+  "ghe": [
+   {
+    "ma_ghe": 1,
+    "so_ghe": "12A",
+    "trang_thai": "trong",
+    "nguoi_giu": null
+   },
+   {
+    "ma_ghe": 2,
+    "so_ghe": "12B",
+    "trang_thai": "trong",
+    "nguoi_giu": null
+   }
+  ]
+ }
+}
